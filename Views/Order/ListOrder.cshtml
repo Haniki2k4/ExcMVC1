@@ -1,0 +1,67 @@
+﻿@model IEnumerable<ExcMVC1.Models.DonHang>
+
+@{
+    ViewBag.Title = "ListOrder";
+    ViewBag.active = 4;
+    Layout = "~/Views/Share/LayoutUser.cshtml";
+}
+
+<main>
+    <div class="container1" style="margin-top: 50px">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Danh sách đơn hàng</h2>
+                <p>
+                    @Html.ActionLink("Thêm đơn hàng mới", "AddDonHang")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Tên Khách Hàng
+                        </th>
+                        <th>
+                            Số Điện Thoại
+                        </th>
+                        <th>
+                            Địa Chỉ
+                        </th>
+                        <th>
+                            Thời Gian Đặt Hàng
+                        </th>
+                        <th>
+                            Tên Máy
+                        </th>
+                        <th>#</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SDT)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DiaChi)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DateOrder)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenMay)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditDonHang", new { idDH = item.ID }) |
+                                @Html.ActionLink("Details", "DetailsDonHang", new { idDH = item.ID }) |
+                                @Html.ActionLink("Delete", "DeleteDonHang", new { idDH = item.ID })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</main>

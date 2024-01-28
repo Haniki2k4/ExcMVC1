@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ExcMVC1.Models.KhachHang>
+
+@{
+    ViewBag.Title = "ListCustomer";
+    ViewBag.active = 3;
+    Layout = "~/Views/Share/LayoutUser.cshtml";
+}
+
+<div class="container1" style="margin-top: 50px">
+    <div class="row">
+        <div class="col-md-8">
+            <h2>
+                Danh sách đơn hàng
+            </h2>
+            <a href="~/Customer/AddKhachHang">Thêm khách hàng mới.</a>
+            <hr />
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SoDT)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.DiaChi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.GioiTinh)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SoDT)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DiaChi)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.GioiTinh)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "EditCustomer", new { idKH = item.ID }) |
+                            @Html.ActionLink("Details", "CustomerDetails", new { idKH = item.ID }) |
+                            @Html.ActionLink("Delete", "DeleteCustomer", new { idKH = item.ID })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

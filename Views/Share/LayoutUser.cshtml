@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/des.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="h1">
+        --Test Web--
+    </div>
+    <!-- Menu -->
+    <div class="container">
+        <ul class="simple-menu">
+            <li><a href="~/Home/Home" class="nav-item-@Html.Raw(ViewBag.active == 1 ? "active":"")">
+                <span>Trang Chủ</span>
+                </a>
+            </li>
+            <li><a href="~/Home/ListMayTinh" class="nav-item-@Html.Raw(ViewBag.active == 2 ? "active":"")">
+                <span>Máy Tính</span>
+                </a>
+            </li>
+            <li><a href="~/Customer/ListCustomer" class="nav-item-@Html.Raw(ViewBag.active == 3 ? "active":"")">
+                <span>Khách Hàng</span>
+                </a>
+            </li>
+            <li><a href="~/Order/ListOrder" class="nav-item-@Html.Raw(ViewBag.active == 4 ? "active":"")">
+                <span>Đơn Hàng</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="header1">
+        @ViewBag.header1
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

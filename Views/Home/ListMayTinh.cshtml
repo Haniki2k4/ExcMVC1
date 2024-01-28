@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ExcMVC1.Models.MayTinh>
+
+@{
+    ViewBag.Title = "ListMayTinh";
+    ViewBag.active = 2;
+    Layout = "~/Views/Share/LayoutUser.cshtml";
+}
+
+<main>
+    <div class="container1" style="margin-top: 50px">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Danh sách máy tính</h2>
+                <a href="~/Home/AddMaytinh">Thêm máy tính mới.</a>
+                <table class="table">
+                    <tr>
+                        <th>
+                            Mã Máy
+                        </th>
+                        <th>
+                            Tên Máy
+                        </th>
+                        <th>
+                            Dòng Máy
+                        </th>
+                        <th>
+                            Giá Bán
+                        </th>
+                        <th>
+                            Ngày Sản Xuất
+                        </th>
+                        <th>
+                            Hãng Sản Xuất
+                        </th>
+                        <th>#</th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MaMay)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TenMay)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DongMay)
+                            </td>
+                            <td>
+                                @string.Format("{0:#,0}", item.GiaBan)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NgaySX)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.HangSX)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditMaytinh", new { idMT = item.MaMay }) |
+                                @Html.ActionLink("Delete", "DeleteMayTinh", new { idMT = item.MaMay })
+                            </td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
