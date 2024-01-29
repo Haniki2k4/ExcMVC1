@@ -20,6 +20,25 @@ namespace ExcMVC1.Controllers
             return View(DsMtinh);
         }
 
+        public ActionResult HangAsus()
+        {
+
+            TestWebEntities2 db = new TestWebEntities2();
+            var kq = (from item in db.MayTinhs
+                      where item.HangSX == "Asus" select item 
+                      ).ToList();
+            return View(kq);
+        }
+        public ActionResult HangLenovo()
+        {
+
+            TestWebEntities2 db = new TestWebEntities2();
+            var kq = (from item in db.MayTinhs
+                      where item.HangSX == "Lenovo" select item 
+                      ).ToList();
+            return View(kq);
+        }
+
         public ActionResult AddMaytinh()
         {
             return View();

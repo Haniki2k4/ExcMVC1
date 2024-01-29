@@ -59,9 +59,12 @@
             color: #fff;
             background: #1c7b57;
             line-height: 30px;
+            text-align: center;
+            font-size: 15px;
             text-decoration: none;
             padding: 0 15px 0 18px;
             height: 28px;
+            width: 150px;
         }
 
             .simple-menu li a.right {
@@ -75,6 +78,7 @@
             .simple-menu li a.nav-item-active {
                 color: #2E4560;
                 background: #fff;
+                font-size: 16px;
             }
 
             .simple-menu li a.current:hover {
@@ -82,7 +86,7 @@
                 background: #fff;
             }
 
-.body {
+body {
     padding-left: 15px;
     padding-right: 15px;
     min-height: 50vh;
@@ -153,13 +157,13 @@
 .float-left {
     border: 3px solid rgb(157, 153, 153);
     border-radius: 3px;
-    box-shadow: 2px 3px rgb(189, 187, 187);
     float: left;
     height: 255px;
+    width: 22.5%;
 }
 
     .float-left img {
-        width: 300px;
+        width: 270px;
         height: 250px;
         float: left;
         padding-right: 20px;
@@ -230,7 +234,7 @@
 }
 
     .float-right-2 img {
-        width: 350px !important;
+        width: 301px !important;
         float: left;
         padding-right: 20px;
     }
@@ -249,4 +253,37 @@
     background-color: #03ba89;
     color: white;
     font-weight: bold;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    margin-top:26px;
+    display: block;
 }

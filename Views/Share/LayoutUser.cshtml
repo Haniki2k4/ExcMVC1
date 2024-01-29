@@ -21,9 +21,16 @@
                 </a>
             </li>
             <li>
-                <a href="~/Home/ListMayTinh" class="nav-item-@Html.Raw(ViewBag.active == 2 ? "active":"")">
-                    <span>Máy Tính</span>
-                </a>
+                <div class="dropdown">
+                    <a href="~/Home/ListMayTinh" class="nav-item-@Html.Raw(ViewBag.active == 2 ? "active":"")">
+                        <span>Máy Tính</span>
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="~/Home/HangAsus">Hãng Asus</a>
+                        <a href="~/Home/HangLenovo">Hãng Lenovo</a>
+                        <a href="#">Hãng Acer</a>
+                    </div>
+                </div>
             </li>
             <li>
                 <a href="~/Customer/ListCustomer" class="nav-item-@Html.Raw(ViewBag.active == 3 ? "active":"")">
