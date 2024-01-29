@@ -24,6 +24,7 @@
     padding: 25px 12px 0 15px;
     background: #03ba89;
 }
+
 .container1 {
     padding-left: 20px;
     padding-right: 15px;
@@ -76,16 +77,17 @@
                 background: #fff;
             }
 
-                .simple-menu li a.current:hover {
-                    color: #2E4560;
-                    background: #fff;
-                }
+            .simple-menu li a.current:hover {
+                color: #2E4560;
+                background: #fff;
+            }
 
-.body{
+.body {
     padding-left: 15px;
     padding-right: 15px;
-    height: 50vh;
+    min-height: 50vh;
 }
+
 .text-danger {
     color: red;
 }
@@ -93,6 +95,14 @@
 .text-danger1 {
     color: red;
     font-size: 25px;
+}
+
+.footer {
+    background: rgb(9, 172, 128);
+    padding: 10px 30px;
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
 }
 
 .table {
@@ -107,24 +117,25 @@
     margin-top: 20px;
     margin-bottom: 50px;
 }
-.table td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    text-align: center;
-    vertical-align: middle;
-}
 
-.table th {
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+    .table td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        text-align: center;
+        vertical-align: middle;
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
 
 
-.table tr:hover td {
-    background-color: #03ba89;
-}
+    .table tr:hover td {
+        background-color: #03ba89;
+    }
 
 .control-label-col-md-2 {
     font-weight: bold;
@@ -146,6 +157,7 @@
     float: left;
     height: 255px;
 }
+
     .float-left img {
         width: 300px;
         height: 250px;
@@ -233,10 +245,8 @@
     object-fit: contain;
 }
 
-.footer {
-    background-color: rgb(9, 172, 128);
-    padding: 10px 30px;
-    text-align: center;
-    color: #fff;
-    margin-top: 50px;
+.form-group button {
+    background-color: #03ba89;
+    color: white;
+    font-weight: bold;
 }

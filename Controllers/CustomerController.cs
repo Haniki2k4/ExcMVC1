@@ -36,6 +36,11 @@ namespace ExcMVC1.Controllers
                 return View(model);
             }
             TestWebEntities2 db = new TestWebEntities2();
+            if (db.KhachHangs.Any(m => m.ID == model.ID))
+            {
+                ModelState.AddModelError("", "ID đã tồn tại. Hãy chọn một ID khác.");
+                return View(model);
+            }
             db.KhachHangs.Add(model);
             db.SaveChanges();
             return RedirectToAction("ListCustomer");

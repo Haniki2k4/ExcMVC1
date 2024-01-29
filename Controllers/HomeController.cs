@@ -35,7 +35,12 @@ namespace ExcMVC1.Controllers
             }
             if (ModelState.IsValid == true)
             {
-                TestWebEntities2 db = new TestWebEntities2();
+                TestWebEntities2 db = new TestWebEntities2(); 
+                if (db.MayTinhs.Any(m => m.MaMay == model.MaMay))
+                {
+                    ModelState.AddModelError("", "Mã máy đã tồn tại.");
+                    return View(model);
+                }
                 db.MayTinhs.Add(model);
                 db.SaveChanges();
                 return RedirectToAction("ListMayTinh");
