@@ -14,20 +14,24 @@
     <!-- Menu -->
     <div class="container">
         <ul class="simple-menu">
-            <li><a href="~/Home/Home" class="nav-item-@Html.Raw(ViewBag.active == 1 ? "active":"")">
-                <span>Trang Chủ</span>
+            <li>
+                <a href="~/Home/Home" class="nav-item-@Html.Raw(ViewBag.active == 1 ? "active":"")">
+                    <span>Trang Chủ</span>
                 </a>
             </li>
-            <li><a href="~/Home/ListMayTinh" class="nav-item-@Html.Raw(ViewBag.active == 2 ? "active":"")">
-                <span>Máy Tính</span>
+            <li>
+                <a href="~/Home/ListMayTinh" class="nav-item-@Html.Raw(ViewBag.active == 2 ? "active":"")">
+                    <span>Máy Tính</span>
                 </a>
             </li>
-            <li><a href="~/Customer/ListCustomer" class="nav-item-@Html.Raw(ViewBag.active == 3 ? "active":"")">
-                <span>Khách Hàng</span>
+            <li>
+                <a href="~/Customer/ListCustomer" class="nav-item-@Html.Raw(ViewBag.active == 3 ? "active":"")">
+                    <span>Khách Hàng</span>
                 </a>
             </li>
-            <li><a href="~/Order/ListOrder" class="nav-item-@Html.Raw(ViewBag.active == 4 ? "active":"")">
-                <span>Đơn Hàng</span>
+            <li>
+                <a href="~/Order/ListOrder" class="nav-item-@Html.Raw(ViewBag.active == 4 ? "active":"")">
+                    <span>Đơn Hàng</span>
                 </a>
             </li>
         </ul>
@@ -38,6 +42,14 @@
 
     <div>
         @RenderBody()
+    </div>
+
+    <div style="clear: both; margin-bottom: 10px;"></div>
+
+    <div class="footer">
+        <p>Email : webtesting@gmail.com</p>
+        <p>Address: HaNoi, VietNam</p>
+        <h5>&copy; Copyright 2021. webtesting.com</h5>
     </div>
 
 </body>
